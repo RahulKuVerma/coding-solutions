@@ -56,7 +56,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-19T14:48:18.309Z  
+**Submitted:** 2026-08-19T14:51:19.706Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -66,8 +66,9 @@ int main() {
 	// your code goes here
 	int t;
 	cin>>t;
-	int sum=0;
+
 	while(t--){
+	    int sum=0;
 	    int n;
 	    cin>>n;
 	    int arr[2*n];
@@ -76,7 +77,7 @@ int main() {
 	    }
 	    int j=2*n-1;
 	    int k=0;
-	    while(k>j){
+	    while(k<j){
 	        if(arr[j]>arr[k]){
 	            std::swap(arr[j],arr[k]);
 	        }
@@ -84,8 +85,9 @@ int main() {
 	        k++;
 	        j--;
 	    }
+	    cout<<sum<<endl;
 	}
-	cout<<sum<<endl;
+	
 return 0;
 }
 
