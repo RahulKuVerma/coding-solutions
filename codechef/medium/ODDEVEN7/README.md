@@ -54,7 +54,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-19T14:58:31.939Z  
+**Submitted:** 2026-08-19T15:04:33.995Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -68,11 +68,26 @@ int main() {
 	    int n;
 	    cin>>n;
 	    int arr[n];
+	    int even =0;
+	    int odd= 0;
 	    for(int  i=0;i<n;i++){
 	        cin>>arr[i];
 	    }
-	    
-	    
+	     for(int  i=0;i<n;i++){
+	        if(arr[i]%2==0){
+	            even++;
+	        }
+	        else{
+	            odd++;
+	        }
+	    }
+	    int extra=0;
+	    if(even!=odd){
+	        extra=1;
+	    }
+	    int subset;
+	    subset= 2*min(even,odd)+extra;
+	    cout<<subset<<endl;
 	}
 return 0;
 }
