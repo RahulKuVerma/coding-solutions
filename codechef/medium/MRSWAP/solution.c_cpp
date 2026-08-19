@@ -5,8 +5,9 @@ int main() {
 	// your code goes here
 	int t;
 	cin>>t;
-	int sum=0;
+
 	while(t--){
+	    int sum=0;
 	    int n;
 	    cin>>n;
 	    int arr[2*n];
@@ -15,7 +16,7 @@ int main() {
 	    }
 	    int j=2*n-1;
 	    int k=0;
-	    while(k>j){
+	    while(k<j){
 	        if(arr[j]>arr[k]){
 	            std::swap(arr[j],arr[k]);
 	        }
@@ -23,7 +24,8 @@ int main() {
 	        k++;
 	        j--;
 	    }
+	    cout<<sum<<endl;
 	}
-	cout<<sum<<endl;
+	
 return 0;
 }
