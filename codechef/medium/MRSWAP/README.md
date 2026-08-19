@@ -56,7 +56,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-19T14:40:52.325Z  
+**Submitted:** 2026-08-19T14:48:18.309Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -64,7 +64,29 @@ using namespace std;
 
 int main() {
 	// your code goes here
-
+	int t;
+	cin>>t;
+	int sum=0;
+	while(t--){
+	    int n;
+	    cin>>n;
+	    int arr[2*n];
+	    for(int i=0;i<2*n;i++){
+	        cin>>arr[i];
+	    }
+	    int j=2*n-1;
+	    int k=0;
+	    while(k>j){
+	        if(arr[j]>arr[k]){
+	            std::swap(arr[j],arr[k]);
+	        }
+	        sum= sum+arr[k];
+	        k++;
+	        j--;
+	    }
+	}
+	cout<<sum<<endl;
+return 0;
 }
 
 ```
