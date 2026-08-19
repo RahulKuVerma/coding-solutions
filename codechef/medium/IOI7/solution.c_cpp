@@ -5,7 +5,7 @@ int main() {
 	// your code goes here
 	int n,g;
 	cin>>n>>g;
-	if(n>g){
+	if(n>=g){
 	    cout<<"Yes"<<endl;
 	}
 	else{
