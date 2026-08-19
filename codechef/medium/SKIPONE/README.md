@@ -58,7 +58,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-19T15:46:40.295Z  
+**Submitted:** 2026-08-19T15:53:15.188Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -75,19 +75,18 @@ int main() {
 	    for(int i=0;i<n;i++){
 	        cin>>arr[i];
 	    }
+	    int sum=0;
 	    int count=0;
 	    bool flag=true;
 	    for(int i=0;i<n;i++){
 	        if(arr[i]<=k){
-	            k= k-arr[i];
-	        count++;
-	            
-	        }
-	       else if(flag){
+	        sum=sum+arr[i];
+	        count++;}
+	        if(arr[i]>=k || sum>=k){
 	            count++;
 	            flag = false;
 	        }
-	        else{
+	        if(sum>=k && flag ==false){
 	            break;
 	        }
 	    }
