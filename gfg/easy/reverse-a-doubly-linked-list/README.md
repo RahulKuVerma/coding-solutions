@@ -35,7 +35,7 @@ Explanation: After reversing the given doubly linked list the new list will be 1
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-20T20:18:20.815Z  
+**Submitted:** 2026-08-20T20:25:44.386Z  
 
 ```cpp
 /* Structure of Doubly Linked List Node
@@ -57,20 +57,17 @@ class Solution {
   public:
     Node *reverse(Node *head) {
         // code here
-          // Code here
-    Node *temp =head;
-    stack<int>st;
-    while(temp!=NULL){
-        st.push(temp->data);
-        temp=temp->next;
-    }
-    temp = head;
-    while(temp!=NULL){
-        temp->data = st.top();
-        st.pop();
-        temp=temp->next;
-    }
-    return head;
+       if(head==NULL || head->next==NULL){
+           return head;
+       } 
+       Node * last=NULL, *current=head;
+       while(current!=NULL){
+           last=current->prev;
+           current->prev =current->next;
+           current->next =last;
+           current =current->prev;
+       }
+       return (last->prev);
     }
 };
 ```
