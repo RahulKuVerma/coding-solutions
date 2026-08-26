@@ -65,44 +65,55 @@ For the given costs, this is optimal.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-26T15:43:53.518Z  
+**Submitted:** 2026-08-26T15:51:28.959Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-	// your code goes here
-	
-	int t;
-	cin>>t;
-	while(t--){
-	    int a,b,p,q,r;
-	    cin>>a>>b>>p>>q>>r;
-	    int costdig=0;
-	    costdig= min(a,b)*r+(a-min(a,b))*p+(b-min(a,b))*q;
-	    int costru=0;
-	    int stepr=0;
-	    if((a%2)!=0){
-	        stepr=(a/2)+1;
-	    }
-	    else{
-	        stepr=a/2;
-	    }
-	    int stepu=0;
-	    if((b%2)!=0){
-	        stepu=(b/2)+1;
-	    }
-	    else{
-	        stepu=b/2;
-	    }
-	    costru=stepr*p+stepu*q;
-	    int costfinal = min(costru,costdig);
-	    cout<<costfinal<<endl;
-	}
-return 0;
-}
+    int t;
+    cin >> t;
 
+    while (t--) {
+        int a, b, p, q, r;
+        cin >> a >> b >> p >> q >> r;
+
+        int costdig = 0;
+
+        int common = min(a, b);
+
+        costdig = common * min(r, p + q)
+                + (a - common) * p
+                + (b - common) * q;
+
+        int costru = 0;
+
+        int stepr = 0;
+        if ((a % 2) != 0) {
+            stepr = (a / 2) + 1;
+        }
+        else {
+            stepr = a / 2;
+        }
+
+        int stepu = 0;
+        if ((b % 2) != 0) {
+            stepu = (b / 2) + 1;
+        }
+        else {
+            stepu = b / 2;
+        }
+
+        costru = stepr * p + stepu * q;
+
+        int costfinal = min(costru, costdig);
+
+        cout << costfinal << endl;
+    }
+
+    return 0;
+}
 ```
 
 ---
