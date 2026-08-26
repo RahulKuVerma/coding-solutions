@@ -65,7 +65,7 @@ For the given costs, this is optimal.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-26T15:09:35.380Z  
+**Submitted:** 2026-08-26T15:11:24.999Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
