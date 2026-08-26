@@ -65,7 +65,7 @@ For the given costs, this is optimal.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-26T15:35:05.488Z  
+**Submitted:** 2026-08-26T15:43:53.518Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -80,23 +80,7 @@ int main() {
 	    int a,b,p,q,r;
 	    cin>>a>>b>>p>>q>>r;
 	    int costdig=0;
-	    int stepdigr=0;
-	    int sdr=(a-min(a,b));
-	    if((sdr%2)!=0){
-	        stepdigr=(sdr/2)+1;
-	    }
-	    else{
-	        stepdigr=sdr/2;
-	    }
-	    int sdu=(b-min(a,b));
-	     int stepdigu=0;
-	    if((sdu%2)!=0){
-	        stepdigu=(sdu/2)+1;
-	    }
-	    else{
-	        stepdigu=sdu/2;
-	    }
-	    costdig= min(a,b)*r+(stepdigr)*p+(stepdigu)*q;
+	    costdig= min(a,b)*r+(a-min(a,b))*p+(b-min(a,b))*q;
 	    int costru=0;
 	    int stepr=0;
 	    if((a%2)!=0){
