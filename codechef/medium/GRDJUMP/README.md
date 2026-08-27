@@ -65,7 +65,7 @@ For the given costs, this is optimal.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-27T11:12:52.183Z  
+**Submitted:** 2026-08-27T11:13:38.671Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -81,11 +81,9 @@ int main() {
 
         int costdig = 0;
 
-        int common = min(a, b);
-
-        costdig = common * min(r, p + q)
-                + (a - common) * p
-                + (b - common) * q;
+        costdig = min(a, b) * r
+                + (a - min(a, b)) * p
+                + (b - min(a, b)) * q;
 
         int costru = 0;
 
