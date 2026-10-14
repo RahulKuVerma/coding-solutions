@@ -58,7 +58,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-14T15:06:32.328Z  
+**Submitted:** 2026-10-14T15:13:22.335Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -66,7 +66,35 @@ using namespace std;
 
 int main() {
 	// your code goes here
+int t;
+cin>>t;
+while(t--){
+    int N,K;
+    cin>>N>>K;
+    
+    vector<int>arr(N);
+    
+    for(int i=0;i<N;i++){
+        cin>>arr[i];
+    }
+    
+    sort(arr.begin(),arr.end(),greater<int>());
+    
+    int sum =0;
+    
+        for(int i=0;i<N;i++){
+        sum=sum+arr[i];
+        K--;
+        if(K==0){
+            break;
+        }
+    }
+    
+    cout<<sum<<endl;
+    
+}
 
+return 0;
 }
 
 ```
