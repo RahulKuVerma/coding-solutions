@@ -1,0 +1,13 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int a,b;
+	cin>>a>>b;
+	int sum1= a*3;
+	int sum2= a+b;
+	int fin = min(sum1,sum2);
+	cout<<fin;
+	return 0;
+}
