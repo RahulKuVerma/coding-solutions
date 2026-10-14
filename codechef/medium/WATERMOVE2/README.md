@@ -58,7 +58,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-14T15:13:22.335Z  
+**Submitted:** 2026-10-14T15:16:11.790Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -80,17 +80,13 @@ while(t--){
     
     sort(arr.begin(),arr.end(),greater<int>());
     
-    int sum =0;
     
-        for(int i=0;i<N;i++){
-        sum=sum+arr[i];
-        K--;
-        if(K==0){
-            break;
+    long long result = arr[0];
+        for (int i = 1; i <= K && i < N; i++) {
+            result += arr[i];   
         }
-    }
-    
-    cout<<sum<<endl;
+   
+    cout<<result<<endl;
     
 }
 
