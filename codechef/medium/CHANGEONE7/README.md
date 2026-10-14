@@ -53,7 +53,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-14T14:57:24.030Z  
+**Submitted:** 2026-10-14T15:02:45.277Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -66,7 +66,7 @@ cin>>t;
 while(t--){
     int N;
     cin>>N;
-    int arr[N];
+    vector<int>arr(N);
     for(int i=0;i<N;i++){
         cin>>arr[i];
     }
@@ -74,24 +74,14 @@ while(t--){
         cout<< 0<<endl;
         continue;
     }
-    int ma,mi,ma2,mi2;
-    ma=arr[0];
-    mi=arr[0];
-    for(int i=0;i<N;i++){
-        if(ma<arr[i]){
-            ma=arr[i];
-        }
-        if(mi>arr[i]){
-            mi=arr[i];
-        }
-    }
-    ma2 = INT_MIN;
-    mi2 = INT_MAX;
-        for (int i = 0; i < N; i++) {
-            if (arr[i] != ma) ma2 = max(ma2, arr[i]);
-            if (arr[i] != mi) mi2 = min(mi2, arr[i]);
-        }
-  
+    
+     sort(arr.begin(), arr.end());
+
+        int mi = arr[0];
+        int ma = arr[N-1];
+        int mi2 = arr[1];       
+        int ma2 = arr[N-2];     
+    
     int fin= ma2-mi;
     int fin2 = ma-mi2;
     int res = std::min(fin,fin2);
