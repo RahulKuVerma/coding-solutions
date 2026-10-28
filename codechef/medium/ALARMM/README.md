@@ -70,40 +70,43 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-28T15:36:34.959Z  
+**Submitted:** 2026-10-28T15:38:21.268Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-	// your code goes here
-int t;
-cin>>t;
-while(t--){
-    int N,K;
-    cin>>N>>K;
-    
-    string S;
-    cin>>S;
-    vector<int>mark;
-    int res=0;
-    for(int i=0;i<N;i++){
-      if(S[i]=='1'){
-          mark.push_back(i+1);
-      }
-    }
-    sort(mark.begin(), mark.end(), greater<int>());
-    
-     int i = 0;
+    int T;
+    cin >> T;
+
+    while (T--) {
+        int N, K;
+        cin >> N >> K;
+
+        string S;
+        cin >> S;
+
+        vector<int> mark;
+
+        for (int i = 0; i < N; i++) {
+            if (S[i] == '1')
+                mark.push_back(i + 1);
+        }
+
+        sort(mark.begin(), mark.end(), greater<int>());
+
+        int res = 0;
+        int i = 0;
 
         while (i < mark.size()) {
             res++;                  
-            int pos = mark[i];  
+            int pos = mark[i];      
+
             i++;
 
             while (i < mark.size() && pos - mark[i] <= K) {
-                i++;            
+                i++;                
             }
         }
 
@@ -112,36 +115,6 @@ while(t--){
 
     return 0;
 }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-      if(mark.size()==1) res =1;
-      else if(mark.size()==0) res=0;
-      else{
-      for(int i=0;i<mark.size();i++){
-          if((mark[i]-K==mark[i+1]) ||(mark[i]==mark[mark.size()-1])){
-              res++;
-              i++;
-            }
-       }
-      
-       }
-       cout<<res<<endl;
-}
-return 0;
-}
-
 ```
 
 ---
