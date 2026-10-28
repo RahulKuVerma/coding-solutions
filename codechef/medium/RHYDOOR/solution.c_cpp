@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+int t;
+cin>>t;
+while(t--){
+   
+   int N;
+   cin>>N;
+   string S;
+   cin>>S;
+   
+   char t = S[0];
+   int count=0;
+   int res=0;
+   
+   for(int i=0;i<N;i++){
+       if(S[i]==t){
+           count++;
+       }
+       if(S[i]!=t){
+           count=1;
+           t=S[i];
+       }
+       if(count==3){
+           res++;
+           count=0;
+       }
+   }
+   cout<<res<<endl;
+}
+return 0;
+}
