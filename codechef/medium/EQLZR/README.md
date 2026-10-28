@@ -68,7 +68,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-28T16:04:30.372Z  
+**Submitted:** 2026-10-28T16:11:58.381Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -76,7 +76,18 @@ using namespace std;
 
 int main() {
 	// your code goes here
-
+int t;
+cin>>t;
+while(t--){
+  int N;
+  cin>>N;
+  int arr[N];
+  for(int i=0;i<N;i++){
+      cin>>arr[i];
+  }
+  
+}
+return 0;
 }
 
 ```
