@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+string S;
+cin>>S;
+
+string  R;
+R+= S[0];
+R+=S[2];
+R+=S[4];
+cout<<R<<endl;
+return 0;
+}
