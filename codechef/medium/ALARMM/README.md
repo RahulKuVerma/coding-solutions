@@ -70,7 +70,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-28T15:32:13.954Z  
+**Submitted:** 2026-10-28T15:36:34.959Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -94,6 +94,38 @@ while(t--){
       }
     }
     sort(mark.begin(), mark.end(), greater<int>());
+    
+     int i = 0;
+
+        while (i < mark.size()) {
+            res++;                  
+            int pos = mark[i];  
+            i++;
+
+            while (i < mark.size() && pos - mark[i] <= K) {
+                i++;            
+            }
+        }
+
+        cout << res << endl;
+    }
+
+    return 0;
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
       if(mark.size()==1) res =1;
       else if(mark.size()==0) res=0;
       else{
