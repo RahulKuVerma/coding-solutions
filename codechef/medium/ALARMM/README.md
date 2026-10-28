@@ -70,7 +70,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-28T15:02:02.951Z  
+**Submitted:** 2026-10-28T15:32:13.954Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -78,7 +78,36 @@ using namespace std;
 
 int main() {
 	// your code goes here
-
+int t;
+cin>>t;
+while(t--){
+    int N,K;
+    cin>>N>>K;
+    
+    string S;
+    cin>>S;
+    vector<int>mark;
+    int res=0;
+    for(int i=0;i<N;i++){
+      if(S[i]=='1'){
+          mark.push_back(i+1);
+      }
+    }
+    sort(mark.begin(), mark.end(), greater<int>());
+      if(mark.size()==1) res =1;
+      else if(mark.size()==0) res=0;
+      else{
+      for(int i=0;i<mark.size();i++){
+          if((mark[i]-K==mark[i+1]) ||(mark[i]==mark[mark.size()-1])){
+              res++;
+              i++;
+            }
+       }
+      
+       }
+       cout<<res<<endl;
+}
+return 0;
 }
 
 ```
